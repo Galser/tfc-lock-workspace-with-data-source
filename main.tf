@@ -8,6 +8,7 @@ data "http" "this" {
   request_headers = {
     Accept        = "application/json"
   }
+ request_timeout_ms = 3000
 }
 
 output "todo" {
