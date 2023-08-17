@@ -1,6 +1,5 @@
-# tfc-lock-workspace-with-data-source
-
-Code taht can make TFC workspace stuck or running for a long time, or fai lwith timeout after long time,  using custom data source requesting to external HTTP resource
+# What
+Code that can make TFC workspace stuck or running for a long time, or fai lwith timeout after long time,  using custom data source requesting to external HTTP resource
 
 # Requirements
 - Terraform knowledge
@@ -19,7 +18,11 @@ Code taht can make TFC workspace stuck or running for a long time, or fai lwith 
 
 - Define vars in a way where `safety_gap` if large for example 60-120 and `api_timeout` low 300-600
 - Run apply, it shoudl be succesfull
+  ![image](https://github.com/Galser/tfc-lock-workspace-with-data-source/assets/914404/34eba7ed-1712-4703-9bdb-abd88efb79a2)
+
 
 ##  Scenario 2  : LONG run and FAIL
 - Opposite to previous case - define vars in a way where `api_timeout` is large for example 60000-120000 and `safety_gap` low or negative , so it will fail
-- Run appluy, observe it fail after long pause
+- Run apply, observe it fail after long pause : 
+  
+![image](https://github.com/Galser/tfc-lock-workspace-with-data-source/assets/914404/e33c6ba6-96f5-4d61-99b8-ed9168c74783)
